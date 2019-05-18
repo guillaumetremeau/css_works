@@ -1,0 +1,69 @@
+@keyframes circle--animation {
+  0%,
+  25% {
+    stroke-dashoffset: 280;
+    transform: rotate(0);
+  }
+  50%,
+  75% {
+    stroke-dashoffset: 75;
+    transform: rotate(45deg);
+  }
+  100% {
+   stroke-dashoffset: 280;
+   transform: rotate(360deg);
+ }
+}
+
+circle {
+  max-width: 100px;
+  fill: transparent;
+  stroke: #2f3d4c;
+  stroke-width: 10;
+  stroke-linecap: round;
+  transform-origin: 50% 50%;
+  stroke-dasharray:283;
+  animation: 1.4s ease-in-out infinite both circle--animation;
+}
+
+@keyframes svg--animation {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg)
+  }
+}
+svg {
+  animation: 2s linear infinite svg--animation;
+  position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 20%;
+    height: 20%;
+    margin: auto;
+}
+body {
+    display: inline-block;
+    margin: 0px auto;
+    text-align: center;
+}
+html {
+  text-align: center;
+}
+html, body {
+    margin: 0;
+    height: 100%;
+}
+h1{
+  font-family: arial;
+}
+.title{
+  height: 10%;
+  overflow:hidden
+}
+.main{
+  height: 90%;
+}
